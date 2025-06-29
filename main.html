@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- EDITA LOS DETALLES DE TU PODCAST AQUÍ -->
+    <title>Podcast FIL2001 | Más allá de lo humano: promesas y amenazas del Transhumanismo</title>
+    <meta name="description" content="¿La propuesta transhumanista representa una ampliación de la libertad humana o una amenaza a la dignidad, la igualdad y la relación ética con el entorno?">
+   
+    <!-- Google Fonts: Orbitron para encabezados, Roboto para texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <!-- 
+        GUÍA DE PERSONALIZACIÓN:
+        1. Reemplaza "Podcast FIL2001" con el nombre de tu podcast.
+        2. Actualiza las etiquetas <title> y <meta> en la sección <head>.
+        3. Reemplaza los enlaces de imágenes de marcador de posición.
+        4. Actualiza todos los enlaces (botones de suscripción, redes sociales, etc.) con los tuyos.
+        5. Añade los detalles de tus episodios en la sección "Episodios".
+    -->
+
+    <header id="home">
+        <!-- REEMPLAZA ESTA URL de la imagen de fondo en la sección <style> de tu CSS si lo deseas -->
+        <div class="container">
+            <h1>Podcast FIL2001</h1>
+            <p class="tagline">Más allá de lo humano: promesas y amenazas del Transhumanismo</p>
+            <nav>
+                <a href="#episodes">Episodios</a>
+                <a href="#listen">Escuchar</a>
+                <a href="#about">Acerca de</a>
+            </nav>
+        </div>
+    </header>
+	
+	<main class="container">
+
+        <!-- SECCIÓN DE ESCUCHA -->
+        <section id="listen">
+            <h2>Escuchar Ahora</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto;">
+                Reproduce el último episodio directamente o suscríbete en tu plataforma favorita a continuación.
+            </p>
+
+            <!-- REPRODUCTOR DE AUDIO HTML5 -->
+            <!-- Instrucciones: 
+                1. Sube tu archivo de audio a tu repositorio de GitHub.
+                2. Cambia "final.wav" por el nombre exacto de tu archivo.
+            -->
+            <div class="player-container">
+                <audio controls class="latest-episode-player">
+                    <source src="final.wav" type="audio/wav">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE EPISODIOS -->
+        <section id="episodes">
+            <h2>Últimos Episodios</h2>
+            <div class="episode-list">
+
+                <!-- EPISODIO 1 -->
+                <div class="episode-item">
+                    <h3>#001 - Más allá de lo humano: promesas y amenazas del Transhumanismo</h3>
+                    <p class="episode-date">Publicado: 24 de junio, 2025</p>
+                    <p>
+                        ¿Estamos ante la evolución de la humanidad o ante la desaparición de lo que significa ser "humano"? El transhumanismo, una corriente que cuestiona y empuja los límites biológicos a través de la técnica, invita a reflexionar sobre el ser humano en el siglo XXI. Con base en las ideas de Nick Bostrom y Pablo Villarroel, debatiremos sobre los riesgos y las promesas que conlleva este proyecto técnico-filosófico.
+                    </p>
+                    <a href="#" class="listen-now-btn">Escuchar y Notas del Episodio</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN ACERCA DE -->
+        <section id="about">
+            <h2>Acerca del Podcast</h2>
+            <p style="max-width: 700px; margin: 0 auto;">
+                Página desarrollada para alojar y darle más emoción y realismo al podcast de FIL2001.
+            </p>
+            <div class="host-info">
+                <!-- REEMPLAZA ESTO con una foto de los anfitriones -->
+                <img src="pic.jpg" alt="Anfitriones del Podcast" class="host-img">
+                <div class="host-bio">
+                    <h3>Presentado por Bastián, Matías y Agustina</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">
+                © <span id="year"></span> Podcast FIL2001.
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Script simple para actualizar automáticamente el año del copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

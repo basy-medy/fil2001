@@ -1,0 +1,234 @@
+/* --- Global Styles & Variables --- */
+/* [MODIFIED] New color palette to match the header image */
+:root {
+    --primary-color: #d9a066; /* A muted, desaturated orange/tan from the image */
+    --background-color: #1a1a1a; /* Very dark, warm gray */
+    --text-color: #e8e2d9;       /* A warm, bone-like off-white */
+    --card-background: #262626;  /* Dark charcoal */
+    --border-color: #3a3a3a;      /* A slightly lighter charcoal */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    /* [MODIFIED] New background image and a matching dark gradient */
+    background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 1)), url('post.jpg') no-repeat center center/cover;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    /* [MODIFIED] Text shadow updated to match the new primary color */
+    text-shadow: 0 0 8px rgba(217, 160, 102, 0.4);
+    margin: 0;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* --- Sections --- */
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Listen Section & Audio Player --- */
+.player-container {
+    margin-bottom: 3rem;
+}
+
+.latest-episode-player {
+    width: 100%;
+    accent-color: var(--primary-color);
+}
+
+.subscribe-heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.subscribe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.subscribe-btn {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary-color);
+    /* [MODIFIED] Text color on hover changed for better contrast */
+    color: var(--background-color); 
+}
+
+.subscribe-btn i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* --- Episodes Section --- */
+.episode-list {
+    display: grid;
+    gap: 2rem;
+}
+
+.episode-item {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.episode-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.episode-item .episode-date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+
+.listen-now-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color); /* Changed for contrast */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.listen-now-btn:hover {
+    background-color: var(--text-color); /* Hover to bone-white */
+}
+
+/* --- About Section --- */
+#about {
+    text-align: center;
+}
+
+.host-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.host-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    object-fit: cover;
+}
+
+.host-bio {
+    max-width: 600px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--card-background);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-text {
+    margin-top: 1rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    nav a {
+        margin: 0 5px;
+    }
+}
