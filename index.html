@@ -15,6 +15,10 @@
     
     <!-- Font Awesome para Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Plyr.io CSS - AÑADIDO PARA EL REPRODUCTOR DE AUDIO -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
 	<link rel="stylesheet" href="style.css">
     
 </head>
@@ -30,7 +34,6 @@
     -->
 
     <header id="home">
-        <!-- REEMPLAZA ESTA URL de la imagen de fondo en la sección <style> de tu CSS si lo deseas -->
         <div class="container">
             <h1>Podcast FIL2001</h1>
             <p class="tagline">Más allá de lo humano: promesas y amenazas del Transhumanismo</p>
@@ -51,13 +54,10 @@
                 Reproduce el último episodio directamente o suscríbete en tu plataforma favorita a continuación.
             </p>
 
-            <!-- REPRODUCTOR DE AUDIO HTML5 -->
-            <!-- Instrucciones: 
-                1. Sube tu archivo de audio a tu repositorio de GitHub.
-                2. Cambia "final.wav" por el nombre exacto de tu archivo.
-            -->
+            <!-- REPRODUCTOR DE AUDIO PLYR.IO - MODIFICADO -->
             <div class="player-container">
-                <audio controls class="latest-episode-player">
+                <!-- El reproductor Plyr.io se adjuntará a esta etiqueta de audio -->
+                <audio class="plyr-audio" controls>
                     <source src="final.wav" type="audio/wav">
                     Tu navegador no soporta el elemento de audio.
                 </audio>
@@ -89,7 +89,6 @@
                 Página desarrollada para alojar y darle más emoción y realismo al podcast de FIL2001.
             </p>
             <div class="host-info">
-                <!-- REEMPLAZA ESTO con una foto de los anfitriones -->
                 <img src="pic.jpg" alt="Anfitriones del Podcast" class="host-img">
                 <div class="host-bio">
                     <h3>Presentado por Bastián, Matías y Agustina</h3>
@@ -107,8 +106,14 @@
         </div>
     </footer>
     
+    <!-- Plyr.io JS - AÑADIDO PARA EL REPRODUCTOR DE AUDIO -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
     <script>
-        // Script simple para actualizar automáticamente el año del copyright
+        // Inicializar el reproductor Plyr.io
+        const player = new Plyr('.plyr-audio');
+
+        // Script para actualizar automáticamente el año del copyright
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 
